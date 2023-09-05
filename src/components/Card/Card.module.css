@@ -1,0 +1,45 @@
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 13rem;
+    width: 22rem;
+    background-color: #FFFFFF;
+    border-radius: 3rem;
+    margin: 2rem;
+    box-shadow: 4px 4px 12px 0px #0000001F;
+
+}
+.img_box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height:100%;
+
+}
+.img{
+    height: 6rem;
+    width:6rem;
+    position: absolute;
+    right: 4.5rem;
+    -webkit-filter: drop-shadow(4px 4px 12px #0000002F);
+}
+.text_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height:100%;
+}
+.title{
+font-size: 1.8rem;
+font-weight: 500;
+margin-bottom: 1.5rem;
+letter-spacing: 0.2rem;
+}
+.quest_number{
+    font-size: 1.2rem;
+}
