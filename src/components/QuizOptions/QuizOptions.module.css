@@ -16,6 +16,27 @@
     margin: 0.7rem 0;
     border-radius: 1rem;
     line-height: normal;
+    transition: transform 0.3s;
+}
+.option:hover{
+    transform: scale(1.08);
+    border: solid 0.2rem #EFEFEF;
+}
+.after_option{
+    color: #737373;
+    font-weight: 500;
+    font-size: 1.3rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    border: solid 0.2rem #EFEFEF;
+    margin: 0.7rem 0;
+    border-radius: 1rem;
+    line-height: normal;
+    transition: transform 0.3s;
+}
+.after_option:hover{
+    border: solid 0.2rem #EFEFEF;
 }
 .circle{
     height: 1rem;
@@ -36,6 +57,20 @@
     border-radius: 1rem;
     line-height: normal;
 }
+.correct:hover{
+    border: solid 0.2rem #3EB8D4;
+}
+.correct_circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100%;
+    background-color: #3EB8D4;
+    color: white;
+    font-weight: 800;
+}
 .incorrect{
     color: #FF5341;
     background-color: #FFDFDC;
@@ -48,6 +83,25 @@
     margin: 0.7rem 0;
     border-radius: 1rem;
     line-height: normal;
+}
+.incorrect:hover{
+    border: solid 0.2rem #FF5341;
+}
+.incorrect_circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100%;
+    background-color: #FF5341;
+    color: white;
+    font-weight: 800;
+}
+.icons{
+    height: 1rem;
+    width: 1rem;
+    font-weight: 1000;
 }
 .next_button{
     color: #FFF;
@@ -64,4 +118,85 @@
 }
 .non_exist{
     display: none;
+}
+
+          /* DESKTOP */
+@media only screen and (min-width: 1700px) {
+    .options_box{
+        width: 75%;
+    }
+    .option{
+        width: 100%;
+        height: 6rem;
+        font-size: 2.5rem;
+    }
+    .circle{
+        height: 2rem;
+        width: 2rem;
+    }
+    .after_option{
+        width: 100%;
+        height: 6rem;
+        font-size: 2.5rem;
+    }
+    .correct{
+        width: 100%;
+        height: 6rem;
+        font-size: 2.5rem;
+    }
+    .correct_circle{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .incorrect{
+        width: 100%;
+        height: 6rem;
+        font-size: 2.5rem;
+    }
+    .incorrect_circle{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .icons{
+        height: 1.8rem;
+        width: 1.8rem;
+    }
+    .next_button{
+        width: 100%;
+        height: 6rem;
+        font-size: 2.5rem;
+    }
+}
+
+          /* MOBILE */
+@media only screen and (max-width: 600px) {
+    .options_box{
+        align-items: center;
+    }
+    .option{
+        width: 327px;
+        height: 52px;
+        font-size: 18px;
+    }
+    .after_option{
+        width: 327px;
+        height: 52px;
+        font-size: 18px;
+    }
+    .correct{
+        width: 327px;
+        height: 52px;
+        font-size: 18px;
+    }
+    .incorrect{
+        width: 327px;
+        height: 52px;
+        font-size: 18px;
+    }
+    .next_button{
+        margin-top: 29px;
+        width: 327px;
+        height: 52px;
+        font-size: 18px;
+    }
 }
