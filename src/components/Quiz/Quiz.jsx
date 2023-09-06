@@ -1,21 +1,11 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import s from "./Quiz.module.css"
-import { useParams, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import {RxCross1} from "react-icons/rx"
 import QuizOptions from "../QuizOptions/QuizOptions"
 
-const Quiz = ()=>{
-    const [questions, setQuestions] = useState([])
-    let params = useParams()
-
-    useEffect(() => {
-        const fetchQuestions = async () => {
-            const response = await fetch(`https://quiz-7.com/questions/${params.questionId}.json`)
-            const data = await response.json()
-            setQuestions(data)
-        }
-        fetchQuestions()
-    }, [])
+const Quiz = ({questions})=>{
+    const [score, setScore] = useState(0)
 
     const randomize = (array)=> {
         var i = array.length,
@@ -29,27 +19,60 @@ const Quiz = ()=>{
         }
         return array;
     }
+    console.log("CAMBIAN LAS PREGUNTAS?",questions)
 
-    const randomQuestions = randomize(questions) 
-    const question = randomQuestions[0]
+    const[order, setOrder] = useState(0)
+    const question = questions[order]
 
     const options = [question?question.option1 + "*":"", question?question.option2:"", question?question.option3:"", question?question.option4:""]
     const randomOptions = randomize(options?options:[])
-    console.log("opciones random en quiz",randomOptions)
+
+    /* if(order>3){
+        return(
+        <div className={s.end_box}>
+            {
+            score>0?
+            <h1 className={s.end_title}>¡Bien hecho, has conseguido {score} puntos por haber respondido {score/100} pregunta/s bien!</h1> :
+            <h1 className={s.end_title}>¡Lo siento, no has conseguido puntos esta vez, vuelve a intentarlo!</h1>
+            }
+            <Link className={s.end_button} to="/">
+                Volver al inicio
+            </Link>
+        </div>
+        )
+    }else{ */
 
     return(
+        
         <div className={s.box}>
+
+            {order>3?
+            <div className={s.end_box}>
+                <div className={s.end_container}>
+                {score>0?
+                    <h1 className={s.end_title}>¡Bien hecho, has conseguido {score} puntos por haber respondido {score/100} pregunta/s bien!</h1> :
+                    <h1 className={s.end_title}>¡Lo siento, no has conseguido puntos esta vez, vuelve a intentarlo!</h1>
+                }
+                <Link className={s.end_button} to="/">
+                    Volver al inicio
+                </Link>
+                </div>
+            </div>:
+            ""}
+            
             <div className={s.header}>
-                <Link className={s.back_button} to="/">
+                <Link onClick={()=>setOrder(4)} className={s.back_button} /* to="/" */>
                     <RxCross1 className={s.crossIcon}/>
                 </Link>
             </div>
-            <div className={s.title_box}>
-                <h1 className={s.title}>{question?question.question:""}</h1>
+            <div className={s.qa_section}>
+                <div className={s.title_box}>
+                    <h1 className={s.title}>{question?question.question:""}</h1>
+                </div>
+                {<QuizOptions score={score} setScore={setScore} randomOptions={randomOptions} order={order} setOrder={setOrder}/>}
             </div>
-            {<QuizOptions question={question} randomOptions={randomOptions}/>}
-            
         </div>
     )
-}
+        }
+/* } */
 export default Quiz;
