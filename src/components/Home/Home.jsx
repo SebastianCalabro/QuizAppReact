@@ -4,21 +4,10 @@ import Profile from "../Profile/Profile"
 
 const Home = ()=>{
 
-    /* const [questions, setQuestions] = useState([]) */
-
-    /* useEffect(() => {
-        const fetchQuestions = async () => {
-            const response = await fetch(`https://quiz-7.com/categories.json`)
-            const data = await response.json()
-            setQuestions(data)
-        }
-        fetchQuestions()
-    }, [])
-    console.log(questions) */
-
     return(
         <div className={s.box}>
             <Profile/>
+            <h2 className={s.play_title}>Let's play</h2>
             <Cards/>
         </div>
     )

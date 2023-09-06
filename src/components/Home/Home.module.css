@@ -3,11 +3,17 @@
     width: 100%;
     background-color: #FAFAFA;
 }
-.prof_section{
-    width: 100%;
-    height:20%;
-    border:1px solid black;
-}
-.title{
-    margin: 0;
+@media only screen and (max-width: 600px) {
+    .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .play_title{
+        margin: 0;
+        width: 85%;
+        
+
+    }
 }
