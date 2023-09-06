@@ -3,6 +3,7 @@ import Home from "./components/Home/Home.jsx"
 import Quiz from './components/Quiz/Quiz.jsx'
 
 import './App.css'
+import QuizRandomizer from './components/QuizRandomizer/QuizRandomizer.jsx'
 
 function App() {
   
@@ -10,7 +11,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/question/:questionId" element={<Quiz />}/>
+        <Route path="/question/:questionId" element={<QuizRandomizer />}/>
       </Routes>
     </BrowserRouter>
   )
