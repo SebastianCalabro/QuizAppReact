@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const Cards = ()=>{
     const [categories, setCategories] = useState([])
+    const [questions, setQuestions] = useState([])
 
     useEffect(() => {
         const fetchCategories = async () => {
@@ -14,12 +15,23 @@ const Cards = ()=>{
             setCategories(data)
         }
         fetchCategories()
+        /* const fetchQuestions = async () => {
+            const response = await fetch(`https://quiz-7.com/questions/${categories}.json`)
+            const data = await response.json()
+            setQuestions(data)
+        }
+        fetchQuestions() */
     }, [])
 
-    console.log(categories)
     return(
         <div className={s.box}>
-            {categories.length>0?categories.map(e=><Card key={e.id} srcImg={e.icon} categoryName={e.title} questNum={e.questions} />):""}
+            {
+            categories.length>0 ?
+            categories.map(cat=>
+                    <Card key={cat.id} id={cat.id} srcImg={cat.icon} categoryName={cat.title} questNum={cat.questions} />
+            ) :
+            ""
+            }
         </div>
     )
 }
