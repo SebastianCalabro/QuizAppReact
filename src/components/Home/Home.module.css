@@ -1,7 +1,17 @@
 .box{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     height: 100%;
     width: 100%;
     background-color: #FAFAFA;
+}
+.play_title{
+    width: 90%;
+    margin: 0;
+    margin-bottom: 1rem;
+    height: 1rem;
 }
 @media only screen and (max-width: 600px) {
     .box{

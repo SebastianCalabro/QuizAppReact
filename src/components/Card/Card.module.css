@@ -14,7 +14,7 @@
     width: 22rem;
     background-color: #FFFFFF;
     border-radius: 3rem;
-    margin: 2rem;
+    margin: 0 2rem;
     box-shadow: 4px 4px 12px 0px #0000001F;
 }
 .img_box{
@@ -30,7 +30,14 @@
     width:6rem;
     position: absolute;
     right: 4.5rem;
-    -webkit-filter: drop-shadow(4px 4px 12px #0000002F);
+    -webkit-filter: drop-shadow(4px 4px 12px #00000063);
+}
+.shadow{
+    position: absolute;
+    top: 10rem;
+    right: 3.5rem;
+    opacity: 0.5;
+    display: none;
 }
 .text_box{
     display: flex;
