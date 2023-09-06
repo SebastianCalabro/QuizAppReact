@@ -17,7 +17,6 @@ const Profile = ()=>{
         }
         fetchProfile()
     }, [])
-    console.log(profile)
     return(
         <div className={s.box}>
             <div className={s.title_box}>
