@@ -237,6 +237,13 @@
         height: 1.2rem;
         width: 1.2rem;
     }
+    .counter_box{
+        height: 60%;
+        margin-left: 2rem;
+    }
+    .counter_text{
+        font-size: 1.2rem;
+    }
     .qa_section{
         display: flex;
         flex-direction: column;

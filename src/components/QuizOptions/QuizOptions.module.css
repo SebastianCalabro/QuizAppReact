@@ -24,6 +24,9 @@
     transform: scale(1.08);
     border: solid 0.2rem #EFEFEF;
 }
+.option:active{
+    outline: none;
+}
 .after_option{
     color: #737373;
     font-weight: 500;
@@ -121,6 +124,14 @@
     border-radius: 1rem;
     line-height: normal;
     width: 100%;
+    transition: transform 0.3s;
+}
+.next_button:hover{
+        transform: scale(1.08);
+        border: none;
+}
+.next_button:active{
+    outline: none;
 }
 .non_exist{
     display: none;
