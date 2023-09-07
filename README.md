@@ -1,8 +1,20 @@
-# React + Vite
+Quiz App de: Sebastián Calabró.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Instrucciones:
+- Clonar el repo en su computadora.
+- Usar el comando `npm install`.
+- Usar el comando `npm run dev`.
+- Abrir en su navegador `http://localhost:5173/`
+  
+Implementaciones:
+- Quiz interactivo.
+- Randomización de preguntas y respuestas.
+- Contador de puntuación.
+- Llamada a una API.
+- Tratado de respuestas correctas e incorrectas.
 
-Currently, two official plugins are available:
+Tecnologías:
+- React
+- JavaScript
+- CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
