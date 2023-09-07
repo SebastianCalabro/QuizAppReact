@@ -1,9 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from "./components/Home/Home.jsx"
-import Quiz from './components/Quiz/Quiz.jsx'
-
-import './App.css'
 import QuizRandomizer from './components/QuizRandomizer/QuizRandomizer.jsx'
+import './App.css'
 
 function App() {
   

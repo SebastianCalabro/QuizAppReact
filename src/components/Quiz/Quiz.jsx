@@ -19,28 +19,12 @@ const Quiz = ({questions})=>{
         }
         return array;
     }
-    console.log("CAMBIAN LAS PREGUNTAS?",questions)
 
     const[order, setOrder] = useState(0)
     const question = questions[order]
 
     const options = [question?question.option1 + "*":"", question?question.option2:"", question?question.option3:"", question?question.option4:""]
     const randomOptions = randomize(options?options:[])
-
-    /* if(order>3){
-        return(
-        <div className={s.end_box}>
-            {
-            score>0?
-            <h1 className={s.end_title}>¡Bien hecho, has conseguido {score} puntos por haber respondido {score/100} pregunta/s bien!</h1> :
-            <h1 className={s.end_title}>¡Lo siento, no has conseguido puntos esta vez, vuelve a intentarlo!</h1>
-            }
-            <Link className={s.end_button} to="/">
-                Volver al inicio
-            </Link>
-        </div>
-        )
-    }else{ */
 
     return(
         
