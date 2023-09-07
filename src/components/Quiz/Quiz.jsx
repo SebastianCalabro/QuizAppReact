@@ -64,6 +64,14 @@ const Quiz = ({questions})=>{
                 <Link onClick={()=>setOrder(4)} className={s.back_button} /* to="/" */>
                     <RxCross1 className={s.crossIcon}/>
                 </Link>
+                <div className={s.counter_box}>
+                    <div className={s.counter}>
+                        <div className={order===0?s.counter_bar0:order===1?s.counter_bar1:order===2?s.counter_bar2:order===3?s.counter_bar3:""}>
+                        </div>
+                    </div>
+                    <span className={s.counter_text}>{`${order>3?0:order+1}/4`}</span>
+                </div>
+                
             </div>
             <div className={s.qa_section}>
                 <div className={s.title_box}>
