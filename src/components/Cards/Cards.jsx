@@ -15,12 +15,6 @@ const Cards = ()=>{
             setCategories(data)
         }
         fetchCategories()
-        /* const fetchQuestions = async () => {
-            const response = await fetch(`https://quiz-7.com/questions/${categories}.json`)
-            const data = await response.json()
-            setQuestions(data)
-        }
-        fetchQuestions() */
     }, [])
 
     return(
