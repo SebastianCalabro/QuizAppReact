@@ -103,6 +103,7 @@ color: #1C1C1C;
         -webkit-filter: drop-shadow(4px 4px 12px #00000000);
     }
     .shadow{
+        display: flex;
         position: absolute;
         top: 4.2rem;
         right: 1.8rem;
