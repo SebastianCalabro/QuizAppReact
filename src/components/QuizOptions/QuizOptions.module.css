@@ -19,6 +19,7 @@
     line-height: normal;
     transition: transform 0.3s;
     width: 100%;
+    background-color: #FAFAFA;
 }
 .option:hover{
     transform: scale(1.08);

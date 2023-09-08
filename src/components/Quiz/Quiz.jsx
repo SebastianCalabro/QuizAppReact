@@ -6,7 +6,8 @@ import QuizOptions from "../QuizOptions/QuizOptions"
 
 const Quiz = ({questions})=>{
     const [score, setScore] = useState(0)
-
+    const[order, setOrder] = useState(0)
+    const [open, setOpen] = useState(false)
     const randomize = (array)=> {
         var i = array.length,
             j = 0,
@@ -19,8 +20,7 @@ const Quiz = ({questions})=>{
         }
         return array;
     }
-
-    const[order, setOrder] = useState(0)
+    
     const question = questions[order]
 
     const options = [question?question.option1 + "*":"", question?question.option2:"", question?question.option3:"", question?question.option4:""]
@@ -30,12 +30,14 @@ const Quiz = ({questions})=>{
         
         <div className={s.box}>
 
-            {order>3?
+            {order>3 || open ?
             <div className={s.end_box}>
                 <div className={s.end_container}>
                 {score>0?
-                    <h1 className={s.end_title}>¡Bien hecho, has conseguido {score} puntos por haber respondido {score/100} pregunta/s bien!</h1> :
-                    <h1 className={s.end_title}>¡Lo siento, no has conseguido puntos esta vez, vuelve a intentarlo!</h1>
+                    <h1 className={s.end_title}>¡Has obtenido {score} puntos por haber respondido {score/100} pregunta/s bien!</h1> :
+                    order<3?
+                    <h1 className={s.end_title}>¡No has conseguido puntos aún!</h1>:
+                    <h1 className={s.end_title}>¡No has conseguido puntos, vuelve a intentarlo!</h1>
                 }
                 <Link className={s.end_button} to="/">
                     Volver al inicio
@@ -45,9 +47,11 @@ const Quiz = ({questions})=>{
             ""}
             
             <div className={s.header}>
-                <Link onClick={()=>setOrder(4)} className={s.back_button} /* to="/" */>
+                { order<4 && 
+                    <Link onClick={()=>setOpen(!open)} className={s.back_button} /* to="/" */>
                     <RxCross1 className={s.crossIcon}/>
                 </Link>
+                }
                 <div className={s.counter_box}>
                     <div className={s.counter}>
                         <div className={order===0?s.counter_bar0:order===1?s.counter_bar1:order===2?s.counter_bar2:order===3?s.counter_bar3:""}>
