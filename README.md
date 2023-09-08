@@ -8,7 +8,7 @@
 - Usar el comando `npm install`.
 - Usar el comando `npm run dev`.
 - Abrir en su navegador `http://localhost:5173/`
-- Correr el testing (opcional).
+- Correr los tests (opcional).
 
 ### Testing:
   Me tome el trabajo de testear los componentes más importantes utilizando vitest, es similar a jest y se encarga del control de errores. 
