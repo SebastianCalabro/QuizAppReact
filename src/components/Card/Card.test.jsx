@@ -13,13 +13,13 @@ describe('Card component', ()=>{
         )
     })
 
-    test('debe renderizar el componente', ()=>{
+    test('should render the component', ()=>{
 
         const card = screen.getAllByRole("link")
         expect(card[0]).toBeDefined()
     })
 
-    test('debe renderizar el nombre de la categoría', ()=>{
+    test('should render the category name', ()=>{
 
         const catName = screen.getAllByText(/testname/i)
         expect(catName[0].textContent).toBe("testname")

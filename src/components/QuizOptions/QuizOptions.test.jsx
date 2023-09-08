@@ -4,7 +4,7 @@ import QuizOptions from "./QuizOptions.jsx";
 import {fireEvent, render, screen} from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom";
 
-describe('Card component', ()=>{
+describe('QuizOptions component', ()=>{
 
     beforeEach(()=>{
         render(
@@ -41,7 +41,7 @@ describe('Card component', ()=>{
         )
     })
 
-    test('debe renderizar las opciones', ()=>{
+    test('should render the options', ()=>{
 
         const options = screen.queryAllByText(/op/i)
         expect(options).toBeDefined()

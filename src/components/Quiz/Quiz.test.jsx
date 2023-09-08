@@ -3,7 +3,7 @@ import Quiz from "./Quiz.jsx"
 import {fireEvent, render, screen} from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom";
 
-describe('Card component', ()=>{
+describe('Quiz component', ()=>{
 
     beforeEach(()=>{
         render(
@@ -39,7 +39,7 @@ describe('Card component', ()=>{
         )
     })
 
-    test('debe renderizar la pregunta', ()=>{
+    test('should render the question', ()=>{
 
         const question = screen.getAllByText(/q/i)
         expect(question[0].textContent).toBe("q1")

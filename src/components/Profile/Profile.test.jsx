@@ -13,14 +13,12 @@ describe('Profile component', ()=>{
     test('should render the title', ()=>{
 
         const points = screen.getAllByText(/hi/i)
-        console.log("en el teeest", points)
         expect(points[0]).toBeDefined()
     })
 
     test('should render the profile picture', ()=>{
 
         const profilePicture = screen.getAllByAltText(/profpic/i)
-        console.log("en el teeest", profilePicture)
         expect(profilePicture[0]).toBeDefined()
     })
 })
