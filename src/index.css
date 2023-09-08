@@ -12,6 +12,9 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+*{
+  color: black;
+}
 
 a {
   font-weight: 500;
