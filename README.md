@@ -8,7 +8,7 @@
 - Correr el testing (opcional).
 
 ### Testing:
-Me tome el trabajo de testear los componentes más importantes utilizando vitest, es similar a jest y se encarga del control de errores. 
+  Me tome el trabajo de testear los componentes más importantes utilizando vitest, es similar a jest y se encarga del control de errores. 
 Para correr los test utilizar el comando `npm test`.
   
 ### Implementaciones:
