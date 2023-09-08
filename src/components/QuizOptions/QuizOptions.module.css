@@ -41,6 +41,7 @@
     line-height: normal;
     transition: transform 0.3s;
     width: 100%;
+    background-color: #FAFAFA;
 }
 .after_option:hover{
     border: solid 0.2rem #EFEFEF;
