@@ -1,5 +1,7 @@
 # Quiz App de: Sebastián Calabró.
 
+Si desean tambien pueden ver la página en el deploy de vercel que le hice: https://start7-quiz-sebastian-calabro.vercel.app/
+
 ### Requerimientos:
 - Node v18.16.1
 
@@ -27,5 +29,3 @@ Para correr los test utilizar el comando `npm test`.
 - JavaScript
 - CSS
 - Vitest
-
-Si desean tambien pueden ver la página en el deploy de vercel que le hice: https://start7-quiz-sebastian-calabro.vercel.app/
