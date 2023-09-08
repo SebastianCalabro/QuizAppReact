@@ -19,8 +19,11 @@ const Profile = ()=>{
     }, [])
     return(
     <div className={s.res_container}>
+        
         <div className={s.box}>
+        
             <div className={s.title_box}>
+                
                 <h1 className={s.title}>Hi {profile.username}!</h1>
                 <span className={s.productive_text}>Let’s make this day productive</span>
             </div>
