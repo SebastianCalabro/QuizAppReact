@@ -3,24 +3,13 @@ import s from "./Quiz.module.css"
 import { Link } from "react-router-dom"
 import {RxCross1} from "react-icons/rx"
 import QuizOptions from "../QuizOptions/QuizOptions"
+import { randomize } from "../../utils/utils"
 
 const Quiz = ({questions})=>{
     const [score, setScore] = useState(0)
     const[order, setOrder] = useState(0)
     const [open, setOpen] = useState(false)
-    const randomize = (array)=> {
-        var i = array.length,
-            j = 0,
-            temp;
-        while (i--) {
-            j = Math.floor(Math.random() * (i+1));
-            temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
-        return array;
-    }
-    
+
     const question = questions[order]
 
     const options = [question?question.option1 + "*":"", question?question.option2:"", question?question.option3:"", question?question.option4:""]
