@@ -1,5 +1,8 @@
 # Quiz App de: Sebastián Calabró.
 
+### Requerimientos:
+- Node v18.16.1
+
 ### Instrucciones:
 - Clonar el repo en su computadora.
 - Usar el comando `npm install`.
